@@ -1,0 +1,22 @@
+
+$bg-white: #fff;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  background-color: $bg-white;
+  font-family: Helvetica;
+
+}
+
+
+li {
+  list-style-type: none;
+}
+
+
