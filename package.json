@@ -1,53 +1,53 @@
 {
-  "name": "shop-it",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack-dev-server --mode development --open",
-    "build": "webpack --mode production"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/hnobi/Shop-It.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/hnobi/Shop-It/issues"
-  },
-  "homepage": "https://github.com/hnobi/Shop-It#readme",
-  "devDependencies": {
-    "@babel/core": "^7.4.3",
-    "@babel/preset-env": "^7.4.3",
-    "@babel/preset-react": "^7.0.0",
-    "babel-loader": "^8.0.5",
-    "css-loader": "^2.1.1",
-    "file-loader": "^3.0.1",
-    "html-loader": "^0.5.5",
-    "html-webpack-plugin": "^3.2.0",
-    "mini-css-extract-plugin": "^0.6.0",
-    "node-sass": "^4.11.0",
-    "sass-loader": "^7.1.0",
-    "sass-rem": "^2.0.1",
-    "style-loader": "^0.23.1",
-    "webpack": "^4.30.0",
-    "webpack-cli": "^3.3.0",
-    "webpack-dev-server": "^3.3.1"
-  },
-  "dependencies": {
-    "@babel/plugin-proposal-class-properties": "^7.5.0",
-    "axios": "^0.19.0",
-    "dotenv": "^8.0.0",
-    "dotenv-webpack": "^1.7.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-redux": "^7.1.0",
-    "react-router-dom": "^5.0.1",
-    "redux": "^4.0.1",
-    "redux-devtools-extension": "^2.13.8",
-    "redux-thunk": "^2.3.0",
-    "url-loader": "^1.1.2"
-  }
+	"name": "shop-it",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "webpack-dev-server --mode development --open",
+		"build": "webpack --mode production"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/hnobi/Shop-It.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/hnobi/Shop-It/issues"
+	},
+	"homepage": "https://github.com/hnobi/Shop-It#readme",
+	"devDependencies": {
+		"@babel/core": "^7.4.3",
+		"@babel/plugin-proposal-class-properties": "^7.5.5",
+		"@babel/preset-env": "^7.4.3",
+		"@babel/preset-react": "^7.0.0",
+		"babel-loader": "^8.0.5",
+		"css-loader": "^2.1.1",
+		"file-loader": "^3.0.1",
+		"html-loader": "^0.5.5",
+		"html-webpack-plugin": "^3.2.0",
+		"mini-css-extract-plugin": "^0.6.0",
+		"node-sass": "^4.11.0",
+		"sass-loader": "^7.1.0",
+		"sass-rem": "^2.0.1",
+		"style-loader": "^0.23.1",
+		"webpack": "^4.30.0",
+		"webpack-cli": "^3.3.0",
+		"webpack-dev-server": "^3.3.1"
+	},
+	"dependencies": {
+		"axios": "^0.19.0",
+		"dotenv": "^8.0.0",
+		"dotenv-webpack": "^1.7.0",
+		"react": "^16.8.6",
+		"react-dom": "^16.8.6",
+		"react-redux": "^7.1.0",
+		"react-router-dom": "^5.0.1",
+		"redux": "^4.0.1",
+		"redux-devtools-extension": "^2.13.8",
+		"redux-thunk": "^2.3.0",
+		"url-loader": "^1.1.2"
+	}
 }
