@@ -2,101 +2,93 @@
 @import "../mixins.scss";
 @import "../colors.scss";
 
-    .container {
-        &__banner {
-            background-image: url("../images/banner.png");
-            background-size: 100% 100%;
-            margin-top: rem(90px);
-            height: 420px;
-            width: 95%;
-            margin: rem(20px) auto;
-            height: 450px;
+.container {
+  &__banner {
+    background-image: url("../images/banner.png");
+    background-size: 100% 100%;
+    margin-top: rem(90px);
+    height: 420px;
+    width: 95%;
+    margin: rem(20px) auto;
+    height: 450px;
 
-            .banner-text {
-                display: block;
-                width: 75%;
-                margin: 0 auto;
-                padding-top: 60px;
+    .banner-text {
+      display: block;
+      width: 75%;
+      margin: 0 auto;
+      padding-top: 60px;
 
-                &__gender-type {
-                    font-size: rem(60px);
-                    font-family: 'Montserrat';
-                    letter-spacing: rem(2px);
-                }
+      &__gender-type {
+        font-size: rem(60px);
+        font-family: "Montserrat";
+        letter-spacing: rem(2px);
+      }
 
-                &__list {
-                    display: flex;
-                    justify-content: flex-start;
-                    font-size: rem(20px);
-                    // font-weight: bold;
-                    color: map-get($colors, white);
-                    margin-top: rem(18px);
-                    line-height: 1.6;
+      &__list {
+        display: flex;
+        justify-content: flex-start;
+        font-size: rem(20px);
+        color: map-get($colors, white);
+        margin-top: rem(18px);
+        line-height: 1.6;
 
-                    li {
-                        margin-right: 100px;
-                          cursor: pointer;
-                    }
-                    
-                }
-            }
+        li {
+          margin-right: 100px;
+          cursor: pointer;
         }
-
-    .items {
-            display: flex;
-            margin: 0 auto;
-            width: 95%;
-            
-            &__category {
-                flex: 0 0 18%;
-                box-shadow: 0 0px 1px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(172, 170, 168, 0.1);
-                margin-top: 10px;
-                display: flex;
-                align-items: center;
-                flex-direction: column;
-                padding-top: 30px;
-            .header{
-              font-weight: 400;
-              letter-spacing: 4px;
-              border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-              padding-bottom: 5px;
-              }
-
-              .list{
-                display: flex;
-                flex-direction: column;
-                margin-top:20px;
-                width: 100%;
-                font-size: 18px;
-                }
-                .list > a{
-                  padding: 10px;
-                  margin-left: 30px;
-                  cursor: pointer;
-                  font-weight: 200;
-
-                  
-                }
-                .list > a:hover{
-                  font-weight: 400;
-                }
-                .activeClass{
-                  color: map-get($colors, primary);
-                }
-
-              }
-            &__list {
-                flex: 1;
-              }
-        }
+      }
     }
-  
+  }
+
+  .items {
+    display: flex;
+    margin: 0 auto;
+    width: 95%;
+    &__category {
+      flex: 0 0 18%;
+      box-shadow: 0 0px 1px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(172, 170, 168, 0.1);
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      padding-top: 30px;
+      .header {
+        font-weight: 400;
+        letter-spacing: 4px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        padding-bottom: 5px;
+      }
+
+      .list {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        width: 100%;
+        font-size: 18px;
+      }
+      .list > a {
+        padding: 10px;
+        margin-left: 30px;
+        cursor: pointer;
+        font-weight: 200;
+      }
+      .list > a:hover {
+        font-weight: 400;
+      }
+      .activeClass {
+        color: map-get($colors, primary);
+      }
+    }
+    &__list {
+      flex: 1;
+    }
+  }
+}
 
 @media only screen and (max-width: 625px) {
-  .containe{
-   .items {
-  flex-direction: column;
-  } 
+  .container {
+    .items {
+      flex-direction: column;
+    }
+  }
 }
-}
-    

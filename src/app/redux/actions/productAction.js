@@ -1,5 +1,9 @@
 import axios from 'axios';
-import { FETCH_PRODUCTS, FETCH_PRODUCTS_BY_CATEGORY } from './../constant/actionTypes';
+import {
+  FETCH_PRODUCTS,
+  FETCH_PRODUCTS_BY_CATEGORY,
+  FETCH_SINGLE_PRODUCT
+} from './../constant/actionTypes';
 
 const baseUrl = process.env.baseUrl;
 
@@ -14,6 +18,10 @@ const getProductsByCategoryAction = (products) => ({
   products: products.data,
 })
 
+const getSingleProductAction = (product) => ({
+  type: FETCH_SINGLE_PRODUCT,
+  product: product.data[0],
+});
 
 // action creators
 export const getAllProducts = (page) => dispatch => {
@@ -25,5 +33,12 @@ export const getAllProducts = (page) => dispatch => {
 export const getProductByCategory = (page, categoryId) => dispatch => {
   axios.get(`${baseUrl}/products/inCategory/${categoryId}?page=${page}&limit=8`).then(products => {
     dispatch(getProductsByCategoryAction(products));
-  });
+  }).catch(e => console.log(e))
+}
+
+export const getSingleProduct = (productId) => dispatch => {
+  axios.get(`${baseUrl}/products/${productId}/details`).then(product => {
+    dispatch(getSingleProductAction(product));
+  }).catch(e => console.log(e))
+
 }

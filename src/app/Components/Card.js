@@ -5,7 +5,7 @@ const Card = (props) => {
   const { img, price, title } = props;
   return (
     <li className="card">
-      {/* <Link to={`/products/${props/id}/`}> */}
+      {/* <Link to={`/products/${props.id}/`}> */}
         <img src={img} />
         <h2> {title}</h2>
         <p>&euro; {price}</p>
