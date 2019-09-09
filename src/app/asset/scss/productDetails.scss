@@ -62,9 +62,10 @@
 		padding: 5px 10px;
 		font-size: 12px;
 		text-align: center;
+		cursor: pointer;
 	}
 
-	&__quality span {
+	&__quatity span {
 		height: 30px;
 		width: 30px;
 		display: inline-block;
@@ -103,6 +104,8 @@
 		font-size: 25px;
 		font-weight: bolder;
 		color: map-get($colors, primary);
+		margin-top: 15px;
+		margin-bottom: 15px;
 	}
 
 	.name {
@@ -117,5 +120,13 @@
 	.active-size {
 		background-color: map-get($colors, primary);
 		color: #ffffff;
+	}
+
+	.product__quatity,
+	.product__size {
+		margin-top: 15px;
+	}
+	.active-color {
+		box-shadow: 0 0 10px 5px rgba(63, 62, 62, 0.6);
 	}
 }

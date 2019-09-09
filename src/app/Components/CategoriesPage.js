@@ -4,6 +4,7 @@ import Navbar from '../Components/Navbar';
 import ItemLists from './ItemLists';
 import Pagination from './Pagination';
 import { getAllProducts, getProductByCategory } from './../redux/actions/productAction';
+import { getCartId } from './../redux/actions/cartAction';
 import { getAllcategories } from './../redux/actions/categoryActions';
 import { connect } from 'react-redux';
 import './../asset/scss/categoriesPage.scss';
@@ -22,8 +23,16 @@ export class CategoriesPage extends Component {
 	}
 
 	componentDidMount() {
+		const cartIdExist = localStorage.getItem('cartId');
+
 		this.props.products(this.state.page);
 		this.props.allcategories();
+
+		// check user has cart Id and if not get new cartId
+		if (!cartIdExist) {
+			this.props.getCartId();
+		}
+		
 	}
 
 	/**
@@ -98,7 +107,6 @@ export class CategoriesPage extends Component {
 
 		return (
 			<Fragment>
-				<TopNavbar />
 				<Navbar />
 				<div>
 					<div className="container">
@@ -171,7 +179,8 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
 	products: page => dispatch(getAllProducts(page)),
 	allcategories: () => dispatch(getAllcategories()),
-	productByCategory: (page, categoryId) => dispatch(getProductByCategory(page, categoryId))
+	productByCategory: (page, categoryId) => dispatch(getProductByCategory(page, categoryId)),
+	getCartId: () => dispatch(getCartId())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(CategoriesPage);

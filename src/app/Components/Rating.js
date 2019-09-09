@@ -40,7 +40,7 @@ class Rating extends React.Component {
 			// 0 <= null is 'true' that is I have "this.state.rating != null"
 			if (i <= this.state.rating && this.state.rating != null) {
 				klass += ' is-selected';
-			}
+			}        
 			return (
 				<label
 					key={i}
