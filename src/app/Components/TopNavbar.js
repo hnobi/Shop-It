@@ -35,7 +35,6 @@ class TopNavbar extends React.Component {
 							<img src={countryIcon} alt="country logo" />
 							<span> &euro; GBP</span>
 						</div>
-
 						<div className="top-nav__user-info--cart">
 							<div className="notification">
 								<img src={notificationImg} alt="country logo" />
