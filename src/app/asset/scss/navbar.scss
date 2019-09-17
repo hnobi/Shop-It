@@ -11,8 +11,10 @@
     width: 100%;
     padding-left: rem(50px);
     padding-right: rem(50px);
-    margin-top: 10px;
-
+    margin-top: 40px;
+    position: fixed;
+    top: 0px;
+    
     &__menu {
         margin-top: 16px;
         display: flex;

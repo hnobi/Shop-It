@@ -10,6 +10,7 @@ import {
 const productReducer = (state = {}, action) => {
 
   switch (action.type) {
+    
     case FETCH_PRODUCTS:
       return { ...state, ...action.products };
 

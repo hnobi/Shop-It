@@ -7,6 +7,7 @@ const cartReducer = (state = {}, action) => {
 
 		case ADD_ITEM_TO_CART:
 		case FETCH_CART_PRODUCTLIST:
+			
 			const qty = action.products.map(product => product.quantity).reduce((a, b) => a + b);
 			const totalPrice = action.products.map(product =>( product.price * product.quantity)).reduce((a, b) => a + b);
 
