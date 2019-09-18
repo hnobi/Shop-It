@@ -4,19 +4,31 @@ import notificationImg from '../asset/images/icons-bag.png';
 import './../asset/scss/top-navbar.scss';
 import { connect } from 'react-redux';
 import { getCartProductList } from './../redux/actions/cartAction';
-// const TopNavbar = () => {
-
+import Cart from './ShoppingCart';
 class TopNavbar extends React.Component {
+
+	state = {
+		active: false
+	}
+
 	componentDidMount() {
-		const id = localStorage.getItem('cartId');
+    const id = localStorage.getItem('cartId');
 		this.props.CartProductList(id);
 	}
 
+
+  toggleCart = () => this.setState({active: !this.state.active})
+
+  cancelBtn = () => this.setState({active: false})
+
+
+
 	render() {
+		console.log(this.state)
 		const references = ['Daily Deals', 'Sell', 'Help & Contact'];
 		const { quantity, price } = this.props;
 		return (
-			<div>
+			<>
 				<div className="top-nav">
 					<div className="top-nav__registration">
 						Hi!<span> Sign in</span> or <span>Register</span>
@@ -35,17 +47,18 @@ class TopNavbar extends React.Component {
 							<img src={countryIcon} alt="country logo" />
 							<span> &euro; GBP</span>
 						</div>
-
 						<div className="top-nav__user-info--cart">
-							<div className="notification">
-								<img src={notificationImg} alt="country logo" />
+							<div className="notification" onClick={this.toggleCart}>
+								<img src={notificationImg} alt="country logo"  />
 								{quantity > 0 && <span className="badge">{quantity}</span>}
 							</div>
 							<span> Your bag : &euro; {price || 0}</span>
 						</div>
 					</div>
 				</div>
-			</div>
+			 <Cart active={this.state.active} cancelBtn = {this.cancelBtn}/> 
+
+				</>
 		);
 	}
 }

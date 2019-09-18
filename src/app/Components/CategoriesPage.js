@@ -9,7 +9,6 @@ import { getAllcategories } from './../redux/actions/categoryActions';
 import { connect } from 'react-redux';
 import './../asset/scss/categoriesPage.scss';
 import './../asset/scss/card.scss';
-
 export class CategoriesPage extends Component {
 	constructor(props) {
 		super(props);
