@@ -1,0 +1,81 @@
+.modal {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 4;
+
+  &__content {
+    min-width: 350px;
+    background-color: #fff;
+    padding: 10px 25px;
+  }
+  &-cancel {
+    font-size: 25px;
+    text-align: end;
+    color: rgb(168, 163, 163);
+    cursor: pointer;
+  }
+  &__header {
+    text-align: center;
+    margin-bottom: 18px;
+  }
+
+  .registration-form {
+    display: flex;
+    flex-direction: column;
+    input[type="text"],
+    input[type="password"] {
+      height: 50px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      outline: none;
+      border: 1px solid rgb(168, 163, 163);
+      text-align: center;
+      font-size: 16px;
+    }
+
+    button {
+      margin-bottom: 10px;
+      border-radius: 50px;
+      width: 150px;
+      padding: 10px 17px;
+      font-size: 13px;
+      background-color: #f62f5e;
+      color: #fff;
+      cursor: pointer;
+      margin: 0 auto;
+    }
+  }
+
+  .form-footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    margin-top: 20px;
+    color: #f62f5e;
+
+    &-member {
+      color: rgb(168, 163, 163);
+    }
+  }
+  .remember {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100px;
+    margin: 10px auto;
+    color: rgb(168, 163, 163);
+    input [type="checkbox"] {
+      height: 10px;
+    }
+  }
+}
+
+.scroll-lock {
+  overflow: hidden;
+}

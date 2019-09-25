@@ -6,20 +6,13 @@ import ProductDetails from './Components/ProductDetails';
 export default class Routes extends Component {
 	render() {
 		return (
-			<BrowserRouter>
+			// <BrowserRouter>
 				<Switch>
 					<Route exact path="/products/:productId/details" component={ProductDetails} />
 					<Route exact path="/" component={Home} />
 				</Switch>
-			</BrowserRouter>
+			// </BrowserRouter>
 		);
 	}
 }
-// onst Router = () => {
-// 	return (
-// 		<Switch>
-// 			<Route exact path="/products/:productId/details" component={ProductDetails} />
-// 			<Route exact path="/" component={Home} />
-// 		</Switch>
-// 	);
-// };
+

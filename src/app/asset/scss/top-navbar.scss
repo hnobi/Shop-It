@@ -1,77 +1,75 @@
 @import "../colors.scss";
 @import "../mixins.scss";
 @import "sass-rem";
-
 .top-nav {
-	width: 100%;
-	font-weight: bold;
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	position: fixed;
-	top: 0;
-	background-color: #fff;
-	height: 45px;
+    width: 100%;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    background-color: #fff;
+    height: 45px;
+    &__registration {
+        span {
+            color: map-get($colors, primary);
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+    &__quick-reference ul {
+        @include flex;
+        li {
+            margin-left: 30px;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+    &__user-info {
+        @include flex;
+        width: rem(320px);
+        &--country {
+            width: 84px;
+            @include flex;
+        }
+        &--cart {
+            @include flex;
+            .notification {
+                position: relative;
+                margin-right: 16px;
+                cursor: pointer;
+                .badge {
+                    position: absolute;
+                    top: -9px;
+                    right: -10px;
+                    padding: 1px 5px;
+                    border-radius: 50%;
+                    background: map-get($colors, primary);
+                    color: map-get($colors, white);
+                    font-size: 12px;
+                    line-height: 1.1em;
+                    padding: 2px;
+                    border: 2px solid #fff;
+                    min-width: 22px;
+                    min-height: 22px;
+                    text-align: center;
+                    letter-spacing: -1px;
+                    text-indent: -1px;
+                }
+            }
+        }
+    }
+    .logout-btn {
+        color: map-get($colors, primary);
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
 
-	&__registration {
-		span {
-			color: map-get($colors, primary);
-			&:hover {
-				cursor: pointer;
-			}
-		}
-	}
-
-	&__quick-reference ul {
-		@include flex;
-
-		li {
-			margin-left: 30px;
-
-			&:hover {
-				cursor: pointer;
-			}
-		}
-	}
-
-	&__user-info {
-		@include flex;
-
-		width: rem(320px);
-
-		&--country {
-			width: 84px;
-
-			@include flex;
-		}
-
-		&--cart {
-			@include flex;
-
-			.notification {
-				position: relative;
-				margin-right: 16px;
-				cursor: pointer;
-
-				.badge {
-					position: absolute;
-					top: -9px;
-					right: -10px;
-					padding: 1px 5px;
-					border-radius: 50%;
-					background: map-get($colors, primary);
-					color: map-get($colors, white);
-					font-size: 12px;
-					line-height: 1.1em;
-					padding: 2px;
-					border: 2px solid #fff;
-					min-width: 22px;
-					min-height: 22px;
-					text-align: center;
-					letter-spacing: -1px;
-					text-indent: -1px;
-				}
-			}
-		}
-	}
+button {
+    border: none;
 }

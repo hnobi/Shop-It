@@ -1,26 +1,24 @@
 @import "../colors.scss";
 
-
-.pagination{
+.pagination {
   display: flex;
   justify-content: center;
   margin: 30px auto;
-width: 400px;
-  a{
-  color: black;
-  text-align: center;
-  padding: 12px 18px;
-  text-decoration: none;
-  border: 1px solid rgb(160, 158, 158);
-cursor: pointer;
+  width: 400px;
+  a {
+    color: black;
+    text-align: center;
+    padding: 12px 18px;
+    text-decoration: none;
+    border: 1px solid rgb(160, 158, 158);
+    cursor: pointer;
     &:hover:not(.active) {
-  background-color: rgb(160, 158, 158);
-}
-
+      background-color: rgb(160, 158, 158);
+    }
   }
 
-  .active{
-      background-color: map-get($colors, primary);
-      color: white;
+  .active {
+    background-color: map-get($colors, primary);
+    color: white;
   }
 }
