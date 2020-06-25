@@ -1,18 +1,31 @@
 import React from "react";
-import { Provider } from 'react-redux';
 import Routes from './Routes';
-import store from './redux/store';
+import { BrowserRouter } from "react-router-dom";
 import TopNavbar from "./Components/TopNavbar";
+import { connect } from "react-redux";
 
 class App extends React.Component {
+
+  state = {
+   isLoggedIn : localStorage.getItem('isLoggedIn') || false
+  }
+ 
   render() {
+        const {customer} = this.props;
+
     return (
-      <Provider store={store}>
-        <TopNavbar/>
+      <BrowserRouter>
+        <TopNavbar {...this.state} isAuthenticated={customer.isAuthenticated} />
         <Routes />
-      </Provider>
+      </BrowserRouter>
     );
   }
 }
 
-export default App;
+
+const mapStateToProps = (state) => ({
+  customer: state.customer,
+});
+
+export default connect(mapStateToProps)(App);
+

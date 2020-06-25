@@ -4,73 +4,74 @@
 
 /* Montserrat */
 .navbar {
-    background-color: map-get($colors, dark);
-    height: 75px;
-    color: #fff;
-    padding-top: 1px;
-    width: 100%;
-    padding-left: rem(50px);
-    padding-right: rem(50px);
-    margin-top: 40px;
-    position: fixed;
-    top: 0px;
-    
-    &__menu {
-        margin-top: 16px;
-        display: flex;
-        justify-content: space-between;
+  background-color: map-get($colors, dark);
+  height: 75px;
+  color: #fff;
+  padding-top: 1px;
+  width: 100%;
+  padding-left: rem(50px);
+  padding-right: rem(50px);
+  margin-top: 40px;
+  position: fixed;
+  top: 0px;
 
-        .site-title {
-            color: map-get($colors, primary);
-            letter-spacing: rem(5px);
-            margin-top: rem(8px);
-            font-size: 25px;
+  &__menu {
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
 
-            &:hover {
-                cursor: pointer;
-            }
-        }
-    }
+    .site-title {
+      color: map-get($colors, primary);
+      letter-spacing: rem(5px);
+      margin-top: rem(8px);
+      font-size: 25px;
 
-    ul {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        width: rem(500px);
-        font-weight: bold;
-        font-family: 'Helvetica';
-        align-items: center;
-
-        li {
-            cursor: pointer;
-        }
-    }
-
-    input[type=search] {
-        background: black url("../images/icons-search-white.png") no-repeat 10px center;
-        border: hsl(0, 0%, 80%);
-        padding: rem(14px) rem(10px) rem(9px) rem(42px);
-        width: rem(55px);
-        font-size: rem(14px);
-        transition: width 0.4s ease-in-out;
+      &:hover {
         cursor: pointer;
-        height: 100%;
+      }
     }
+  }
 
-    input[type=search]:focus {
-        width: 250px;
-        background-color: rgba(255, 255, 255, 0.5);
-        border-color: #66CC75;
-        border-radius: 10em;
-        height: rem(35px);
-        color: #ffffff;
-        outline: none;
-    }
+  ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: rem(500px);
+    font-weight: bold;
+    font-family: "Helvetica";
+    align-items: center;
 
-    input[type=search]::placeholder {
-        color: white;
-        font-weight: bold;
+    li {
+      cursor: pointer;
     }
+  }
+
+  input[type="search"] {
+    background: black url("../images/icons-search-white.png") no-repeat 10px
+      center;
+    border: hsl(0, 0%, 80%);
+    padding: rem(14px) rem(10px) rem(9px) rem(42px);
+    width: rem(55px);
+    font-size: rem(14px);
+    transition: width 0.4s ease-in-out;
+    cursor: pointer;
+    height: 100%;
+  }
+
+  input[type="search"]:focus {
+    width: 250px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-color: #66cc75;
+    border-radius: 10em;
+    height: rem(35px);
+    color: #ffffff;
+    outline: none;
+  }
+
+  input[type="search"]::placeholder {
+    color: white;
+    font-weight: bold;
+  }
 }
 
 //responsi

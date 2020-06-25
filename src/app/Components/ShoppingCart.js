@@ -24,7 +24,6 @@ export class ShoppingCart extends Component {
 
 	render() {
 		const { active, itemList } = this.props;
-		console.log(itemList, '----compone ----');
 		const newClass = active ? 'active' : '';
 		const img = process.env.image;
 

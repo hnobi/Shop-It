@@ -1,0 +1,33 @@
+import axios from "axios";
+import { SIGN_UP, LOGOUT } from "../constant/actionTypes";
+import toastr from "toastr";
+
+const baseUrl = process.env.baseUrl;
+
+export const signupApi = body => dispatch => {
+  axios
+    .post(`${baseUrl}/customers`, body)
+    .then(user => {
+      const customer = user.data;
+
+      dispatch({
+        type: SIGN_UP,
+        user:customer.customer,
+        token: customer.accessToken,
+      });
+      localStorage.setItem("isLoggedIn", true);
+      toastr.success("Successfully created Shop It Account", "Success");
+
+    })
+    .catch(e => {
+      toastr.error(e.response.data.error.message);
+    });
+};
+
+export const logout = () => (dispatch) => {
+         localStorage.removeItem("isLoggedIn");
+
+         dispatch({
+           type: LOGOUT,
+         });
+  };
