@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { signupApi } from "./../redux/actions/customer";
-// import { Redirect } from "react-router-dom";
 
 export class Signup extends Component {
 
