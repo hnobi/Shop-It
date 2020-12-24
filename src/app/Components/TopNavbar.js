@@ -73,7 +73,7 @@ class TopNavbar extends React.Component {
       login = true;
     }
 
-    this.setState({ modalIsOpen: true, login, signup });
+    this.setState({ modalIsOpen: true, login, signup, active: false});
     this.addScrollLock();
   };
 
@@ -81,7 +81,7 @@ handleLogout = () => {
 this.props.logoutUser();
 }
 
-userLoggedIn = (a, b) =>{
+userLoggedIn = (a, b) => {
   if(a || b ) {
     return true;
  }
@@ -94,7 +94,6 @@ userLoggedIn = (a, b) =>{
     const references = ["Daily Deals", "Sell", "Help & Contact"];
     const { quantity, price } = this.props;
     const { signup, modalIsOpen, login } = this.state;
-    console.log(this.userLoggedIn(isLoggedIn, isAuthenticated), "userLoggedIn");
     return (
       <>
         <div className="top-nav">
@@ -131,7 +130,11 @@ userLoggedIn = (a, b) =>{
             </div>
           </div>
         </div>
-        <Cart active={this.state.active} cancelBtn={this.cancelBtn} />
+        <Cart active={this.state.active}
+         cancelBtn={this.cancelBtn}
+          openModal={this.openModal}
+          isLoggedIn={() => this.userLoggedIn(isLoggedIn, isAuthenticated)}
+          />
         {modalIsOpen && (
           <Modal
             cancelBtn={this.cancelAuthBtn}
@@ -143,7 +146,9 @@ userLoggedIn = (a, b) =>{
                 removeModal={this.cancelAuthBtn}
               />
             )}
-            {login && <Login loadSignupPage={this.openModal} />}
+            {login && <Login loadSignupPage={this.openModal} 
+              removeModal={this.cancelAuthBtn}
+            />}
           </Modal>
         )}
       </>

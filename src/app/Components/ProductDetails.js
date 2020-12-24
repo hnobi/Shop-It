@@ -11,8 +11,8 @@ import Rating from "./Rating";
 export class ProductDetails extends React.Component {
   state = {
     qty: 1,
-    size: "",
-    color: "",
+    size: "M",
+    color: "red",
     carti_d: ""
   };
 
